@@ -88,9 +88,9 @@ function DownloadToastContent({
         {hasError ? (
           <p className="text-xs text-red-600">{download.error || 'Download failed'}</p>
         ) : isComplete ? (
-          <p className="text-xs text-green-600">Download complete</p>
+          <p className="text-xs text-green-600">下载完成</p>
         ) : isCancelled ? (
-          <p className="text-xs text-gray-600">Download cancelled</p>
+          <p className="text-xs text-gray-600">已取消下载</p>
         ) : (
           <>
             {/* Progress bar */}

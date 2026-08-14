@@ -157,17 +157,17 @@ export default function AnalyticsConsentSwitch() {
     <>
       <div className="space-y-4">
         <div>
-          <h3 className="text-base font-semibold text-gray-800 mb-2">Usage Analytics</h3>
+          <h3 className="text-base font-semibold text-gray-800 mb-2">使用情况分析</h3>
           <p className="text-sm text-gray-600 mb-4">
-            Usage analytics is off by default. You can turn it on to share anonymous product and performance data; no personal content is collected.
+            使用情况分析默认关闭。开启后仅分享匿名的产品与性能数据，不会收集个人内容。
           </p>
         </div>
 
         <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200">
           <div>
-            <h4 className="font-semibold text-gray-800">Enable Analytics</h4>
+            <h4 className="font-semibold text-gray-800">启用使用情况分析</h4>
             <p className="text-sm text-gray-600">
-              {isProcessing ? 'Updating...' : 'Off unless you choose to enable it'}
+              {isProcessing ? '正在更新...' : '只有你主动开启后才会收集匿名数据'}
             </p>
           </div>
           <div className="flex items-center gap-2 ml-4">
@@ -187,9 +187,9 @@ export default function AnalyticsConsentSwitch() {
           <div className="p-4 border rounded-lg bg-gray-50">
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1 min-w-0">
-                <div className="font-medium text-gray-800 mb-1">Your User ID</div>
+                <div className="font-medium text-gray-800 mb-1">你的用户 ID</div>
                 <p className="text-xs text-gray-600 mb-2">
-                  Share this ID when reporting issues to help us investigate your issue logs
+                  报告问题时可提供此 ID，帮助开发者定位相关日志
                 </p>
                 <div className="flex items-center gap-2">
                   <code className="text-xs text-gray-700 bg-white px-2 py-1 rounded border border-gray-300 font-mono flex-1 truncate">
@@ -200,17 +200,17 @@ export default function AnalyticsConsentSwitch() {
                     variant="outline"
                     size="sm"
                     className="flex-shrink-0"
-                    title="Copy User ID"
+                    title="复制用户 ID"
                   >
                     {isCopied ? (
                       <>
                         <Check className="w-3.5 h-3.5 text-green-600" />
-                        <span className="text-green-600">Copied!</span>
+                        <span className="text-green-600">已复制</span>
                       </>
                     ) : (
                       <>
                         <Copy className="w-3.5 h-3.5" />
-                        <span>Copy</span>
+                        <span>复制</span>
                       </>
                     )}
                   </Button>
@@ -224,13 +224,13 @@ export default function AnalyticsConsentSwitch() {
           <Info className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
           <div className="text-xs text-blue-700">
             <p className="mb-1">
-              Your meetings, transcripts, and recordings remain completely private and local.
+              你的会议、转写和录音始终保存在本地并保持私密。
             </p>
             <button
               onClick={handlePrivacyPolicyClick}
               className="text-blue-600 hover:text-blue-800 underline hover:no-underline"
             >
-              View Privacy Policy
+              查看隐私政策
             </button>
           </div>
         </div>

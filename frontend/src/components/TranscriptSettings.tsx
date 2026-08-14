@@ -99,7 +99,7 @@ export function TranscriptSettings({ transcriptModelConfig, setTranscriptModelCo
         <div>
             <div>
                 {/* <div className="flex justify-between items-center mb-4">
-                    <h3 className="text-lg font-semibold text-gray-900">Transcript Settings</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">转写设置</h3>
                 </div> */}
                 <div className="space-y-4 pb-6">
                     <div>
@@ -224,7 +224,6 @@ export function TranscriptSettings({ transcriptModelConfig, setTranscriptModelCo
         </div >
     )
 }
-
 
 
 

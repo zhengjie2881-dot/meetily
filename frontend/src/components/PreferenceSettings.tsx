@@ -163,7 +163,7 @@ export function PreferenceSettings() {
       <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">数据存储位置</h3>
         <p className="text-sm text-gray-600 mb-6">
-          View and access where Meetily stores your data
+          查看并打开 Meetily 的数据存储位置
         </p>
 
         <div className="space-y-4">
@@ -171,14 +171,14 @@ export function PreferenceSettings() {
           {/* <div className="p-4 border rounded-lg bg-gray-50">
             <div className="font-medium mb-2">数据库</div>
             <div className="text-sm text-gray-600 mb-3 break-all font-mono text-xs">
-              {storageLocations?.database || 'Loading...'}
+              {storageLocations?.database || '加载中...'}
             </div>
             <button
               onClick={() => handleOpenFolder('database')}
               className="flex items-center gap-2 px-3 py-2 text-sm border border-gray-300 rounded-md hover:bg-gray-100 transition-colors"
             >
               <FolderOpen className="w-4 h-4" />
-              Open Folder
+              打开文件夹
             </button>
           </div> */}
 
@@ -186,7 +186,7 @@ export function PreferenceSettings() {
           {/* <div className="p-4 border rounded-lg bg-gray-50">
             <div className="font-medium mb-2">Whisper 模型</div>
             <div className="text-sm text-gray-600 mb-3 break-all font-mono text-xs">
-              {storageLocations?.models || 'Loading...'}
+              {storageLocations?.models || '加载中...'}
             </div>
             <button
               onClick={() => handleOpenFolder('models')}
@@ -201,7 +201,7 @@ export function PreferenceSettings() {
           <div className="p-4 border rounded-lg bg-gray-50">
             <div className="font-medium mb-2">会议录音</div>
             <div className="text-sm text-gray-600 mb-3 break-all font-mono text-xs">
-              {storageLocations?.recordings || 'Loading...'}
+              {storageLocations?.recordings || '加载中...'}
             </div>
             <button
               onClick={() => handleOpenFolder('recordings')}
@@ -215,7 +215,7 @@ export function PreferenceSettings() {
 
         <div className="mt-4 p-3 bg-blue-50 rounded-md">
           <p className="text-xs text-blue-800">
-            <strong>Note:</strong> Database and models are stored together in your application data directory for unified management.
+            <strong>说明：</strong>数据库和模型统一存放在应用数据目录中。
           </p>
         </div>
       </div>
