@@ -31,7 +31,7 @@ export function SummaryUpdaterButtonGroup({
         variant="outline"
         size="sm"
         className={`${isDirty ? 'bg-green-200' : ""}`}
-        title={isSaving ? "Saving" : "Save Changes"}
+        title={isSaving ? "正在保存" : "保存更改"}
         onClick={() => {
           Analytics.trackButtonClick('save_changes', 'meeting_details');
           onSave();
@@ -41,12 +41,12 @@ export function SummaryUpdaterButtonGroup({
         {isSaving ? (
           <>
             <Loader2 className="animate-spin" />
-            <span className="hidden lg:inline">Saving...</span>
+            <span className="hidden lg:inline">保存中...</span>
           </>
         ) : (
           <>
             <Save />
-            <span className="hidden lg:inline">Save</span>
+            <span className="hidden lg:inline">保存</span>
           </>
         )}
       </Button>
@@ -55,7 +55,7 @@ export function SummaryUpdaterButtonGroup({
       <Button
         variant="outline"
         size="sm"
-        title="Copy Summary"
+        title="复制会议纪要"
         onClick={() => {
           Analytics.trackButtonClick('copy_summary', 'meeting_details');
           onCopy();
@@ -64,7 +64,7 @@ export function SummaryUpdaterButtonGroup({
         className="cursor-pointer"
       >
         <Copy />
-        <span className="hidden lg:inline">Copy</span>
+        <span className="hidden lg:inline">复制</span>
       </Button>
 
       {/* Find button */}
@@ -72,7 +72,7 @@ export function SummaryUpdaterButtonGroup({
         <Button
           variant="outline"
           size="sm"
-          title="Find in Summary"
+          title="在会议纪要中查找"
           onClick={() => {
             Analytics.trackButtonClick('find_in_summary', 'meeting_details');
             onFind();
@@ -81,7 +81,7 @@ export function SummaryUpdaterButtonGroup({
           className="cursor-pointer"
         >
           <Search />
-          <span className="hidden lg:inline">Find</span>
+          <span className="hidden lg:inline">查找</span>
         </Button>
       )} */}
     </ButtonGroup>
