@@ -407,7 +407,7 @@ export function DownloadProgressStep() {
         </div>
         <div>
           {state.status === 'waiting' && (
-            <span className="text-sm text-gray-500">Waiting...</span>
+            <span className="text-sm text-gray-500">等待中...</span>
           )}
           {state.status === 'downloading' && (
             <Loader2 className="w-5 h-5 text-gray-700 animate-spin" />
@@ -418,7 +418,7 @@ export function DownloadProgressStep() {
             </div>
           )}
           {state.status === 'error' && (
-            <span className="text-sm text-red-500">Failed</span>
+            <span className="text-sm text-red-500">失败</span>
           )}
         </div>
       </div>
@@ -452,7 +452,7 @@ export function DownloadProgressStep() {
 
       {state.status === 'error' && state.error && (
         <div className="mt-2 p-3 bg-red-50 border border-red-200 rounded-md">
-          <p className="text-sm text-red-600 font-medium">Download Error</p>
+          <p className="text-sm text-red-600 font-medium">下载错误</p>
           <p className="text-xs text-red-500 mt-1">{state.error}</p>
           {(title === 'Transcription Engine' || title === 'Summary Engine') && (
             <button
@@ -473,8 +473,8 @@ export function DownloadProgressStep() {
 
   return (
     <OnboardingContainer
-      title="Getting things ready"
-      description="You can start using Meetily after downloading the Transcription Engine."
+      title="正在准备"
+      description="转写模型下载完成后即可开始使用 Meetily。"
       step={3}
       totalSteps={isMac ? 4 : 3}
     >
@@ -510,7 +510,7 @@ export function DownloadProgressStep() {
               <div className="flex items-start gap-3">
                 <Download className="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-medium">You can continue while this finishes</p>
+                  <p className="font-medium">可以先继续使用，下载将在后台完成</p>
                   <p className="text-gray-700 mt-1">
                     Download will continue in the background.
                   </p>
@@ -530,7 +530,7 @@ export function DownloadProgressStep() {
             {(isCompleting || !parakeetDownloaded) ? (
               <Loader2 className="w-4 h-4 mr-2 animate-spin" />
             ) : (
-              'Continue'
+              '继续'
             )}
           </Button>
         </div>

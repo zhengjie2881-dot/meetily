@@ -83,7 +83,7 @@ export function LanguagePickerPopover({
       ref={containerRef}
       className="w-72 rounded-lg bg-white border border-gray-200 shadow-lg overflow-hidden"
       role="dialog"
-      aria-label="Pick summary language"
+      aria-label="选择总结语言"
     >
       <div className="flex items-center gap-2 px-3 py-2.5 border-b border-gray-100">
         <span className="text-gray-400 text-sm">🔍</span>
@@ -92,7 +92,7 @@ export function LanguagePickerPopover({
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search language..."
+          placeholder="搜索语言..."
           className="flex-1 text-sm text-gray-900 bg-transparent border-none outline-none placeholder-gray-400"
         />
       </div>
@@ -134,7 +134,7 @@ export function LanguagePickerPopover({
             }`}
           >
             <span className="flex flex-col">
-              <span>Auto</span>
+              <span>自动</span>
               {autoSubtitle && (
                 <span className="text-xs font-normal text-gray-400">{autoSubtitle}</span>
               )}
@@ -168,7 +168,7 @@ export function LanguagePickerPopover({
         ))}
 
         {hasNoResults && (
-          <div className="px-3 py-2 text-sm text-gray-400">No matches</div>
+          <div className="px-3 py-2 text-sm text-gray-400">没有匹配结果</div>
         )}
       </div>
     </div>

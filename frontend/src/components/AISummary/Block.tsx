@@ -29,31 +29,31 @@ interface CommandOption {
 const COMMANDS: CommandOption[] = [
   { 
     id: 'text', 
-    label: 'Text', 
+    label: '正文',
     type: 'text', 
     icon: 'T', 
-    description: 'Just start writing with plain text' 
+    description: '输入普通文本'
   },
   { 
     id: 'bullet', 
-    label: 'Bullet List', 
+    label: '项目列表',
     type: 'bullet', 
     icon: '•', 
-    description: 'Create a bulleted list' 
+    description: '创建项目符号列表'
   },
   { 
     id: 'h1', 
-    label: 'Heading 1', 
+    label: '一级标题',
     type: 'heading1', 
     icon: 'H1', 
-    description: 'Big section heading' 
+    description: '大章节标题'
   },
   { 
     id: 'h2', 
-    label: 'Heading 2', 
+    label: '二级标题',
     type: 'heading2', 
     icon: 'H2', 
-    description: 'Medium section heading' 
+    description: '小章节标题'
   },
 ];
 
@@ -250,7 +250,7 @@ export const BlockComponent: React.FC<BlockProps> = ({
             ${block.type === 'heading1' ? 'text-xl font-bold' : ''}
             ${block.type === 'heading2' ? 'text-lg font-semibold' : ''}
           `}
-          placeholder="Type '/' for commands..."
+          placeholder="输入“/”查看命令..."
         />
 
         {showCommands && (

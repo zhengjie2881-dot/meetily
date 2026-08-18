@@ -79,7 +79,7 @@ export function OllamaDownloadProvider({ children }: { children: React.ReactNode
             console.log(`✅ [OllamaDownloadContext] Download complete for ${modelName}`);
 
             toast.success(`Model ${modelName} downloaded!`, {
-              description: 'Model is now ready to use',
+              description: '模型现已可以使用',
               duration: 4000
             });
 

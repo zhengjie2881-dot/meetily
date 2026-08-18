@@ -278,7 +278,7 @@ export function BuiltInModelManager({
   return (
     <div>
       <div className="flex items-center justify-between mb-4">
-        <h4 className="text-sm font-bold">Built-in AI Models</h4>
+        <h4 className="text-sm font-bold">内置 AI模型</h4>
       </div>
 
       <div
@@ -426,7 +426,7 @@ export function BuiltInModelManager({
                         e.stopPropagation();
                         deleteModel(model.name);
                       }}
-                      title="Delete model"
+                      title="删除模型"
                     >
                       <Trash2 className="h-4 w-4" />
                     </button>
@@ -456,7 +456,7 @@ export function BuiltInModelManager({
               {modelIsDownloading && progress !== undefined && (
                 <div className="mt-3 pt-3 border-t border-gray-200">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm font-medium text-gray-900">Downloading...</span>
+                    <span className="text-sm font-medium text-gray-900">正在下载...</span>
                     <span className="text-sm font-semibold text-gray-900">
                       {Math.round(progress)}%
                     </span>

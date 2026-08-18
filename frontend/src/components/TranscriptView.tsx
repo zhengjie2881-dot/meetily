@@ -343,7 +343,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({ transcripts, isR
           className="flex items-center gap-2 mt-4 text-gray-500"
         >
           <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-          <span className="text-sm">Listening...</span>
+          <span className="text-sm">正在聆听...</span>
         </motion.div>
       )}
 
@@ -370,8 +370,8 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({ transcripts, isR
             </>
           ) : (
             <>
-              <p className="text-lg font-semibold">Welcome to meetily!</p>
-              <p className="text-xs mt-1">Start recording to see live transcription</p>
+              <p className="text-lg font-semibold">欢迎使用 Meetily！</p>
+              <p className="text-xs mt-1">开始录音后将在这里显示实时转写</p>
             </>
           )}
         </motion.div>

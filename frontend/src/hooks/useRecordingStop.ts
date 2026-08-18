@@ -270,8 +270,8 @@ export function useRecordingStop(
             shouldDetectSummaryLanguage = !(await applyPinnedSummaryLanguageToMeeting(meetingId));
           } catch (error) {
             console.warn('Failed to apply pinned summary language preference for new meeting:', error);
-            toast.warning('Could not apply default summary language', {
-              description: 'The meeting was saved, but the default summary language was not applied.',
+            toast.warning('无法应用默认总结语言', {
+              description: '会议已保存，但未能应用默认总结语言。',
             });
           }
 
@@ -283,8 +283,8 @@ export function useRecordingStop(
               );
             } catch (error) {
               console.warn('Failed to detect summary language for new meeting:', error);
-              toast.warning('Could not detect summary language', {
-                description: 'The meeting was saved, but Auto could not detect the summary language.',
+              toast.warning('无法检测总结语言', {
+                description: '会议已保存，但自动模式无法检测总结语言。',
               });
             }
           }
@@ -323,7 +323,7 @@ export function useRecordingStop(
           setStatus(RecordingStatus.COMPLETED);
 
           // Show success toast with navigation option
-          toast.success('Recording saved successfully!', {
+          toast.success('录音已保存！', {
             description: `${freshTranscripts.length} transcript segments saved.`,
             action: {
               label: 'View Meeting',
@@ -398,7 +398,7 @@ export function useRecordingStop(
         } catch (saveError) {
           console.error('Failed to save meeting to database:', saveError);
           setStatus(RecordingStatus.ERROR, saveError instanceof Error ? saveError.message : 'Unknown error');
-          toast.error('Failed to save meeting', {
+          toast.error('保存会议失败', {
             description: saveError instanceof Error ? saveError.message : 'Unknown error'
           });
           throw saveError;
